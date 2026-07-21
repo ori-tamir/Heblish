@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Heblish</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      width: 340px;
+      padding: 14px 16px 16px;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #1a1a1a;
+    }
+    h1 { font-size: 18px; margin-bottom: 2px; }
+    .sub { color: #555; font-size: 12px; margin-bottom: 12px; }
+    .stats {
+      background: linear-gradient(135deg, #e8f2ff 0%, #f0f7ff 100%);
+      border: 1px solid #c5daf5;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+    }
+    .stats h2 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #3a6ea5;
+      margin-bottom: 8px;
+    }
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+    .stat-val { font-weight: 700; }
+    .stat-note {
+      font-size: 11px;
+      color: #666;
+      margin-top: 6px;
+      border-top: 1px solid #d0e3f7;
+      padding-top: 6px;
+    }
+    .keys {
+      background: #f4f7fb;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      font-size: 12px;
+    }
+    .keys li { margin-inline-start: 18px; margin-bottom: 3px; }
+    kbd {
+      background: #fff;
+      border: 1px solid #ccd;
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-size: 11px;
+    }
+    a.support {
+      display: block;
+      text-align: center;
+      background: #ffdd00;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 9px 12px;
+      border-radius: 8px;
+    }
+    a.support:hover { filter: brightness(0.97); }
+    .foot {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #777;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Heblish</h1>
+  <p class="sub">Hebrew ↔ English keyboard fix</p>
+
+  <div class="stats">
+    <h2>Your stats (on this device)</h2>
+    <div class="stat-row">
+      <span>Times used</span>
+      <span class="stat-val" id="uses">0</span>
+    </div>
+    <div class="stat-row">
+      <span>Letters not retyped</span>
+      <span class="stat-val" id="letters">0</span>
+    </div>
+    <div class="stat-row">
+      <span>Estimated time saved</span>
+      <span class="stat-val" id="time">0 sec</span>
+    </div>
+    <p class="stat-note" id="stat-note">
+      Estimate: ~0.25 sec per character you would have deleted and typed again.
+    </p>
+  </div>
+
+  <ul class="keys">
+    <li><kbd>Alt</kbd> + <kbd>;</kbd> Hebrew keyboard</li>
+    <li><kbd>Alt</kbd> + <kbd>`</kbd> English keyboard</li>
+  </ul>
+
+  <a class="support" id="bmc" href="#" target="_blank" rel="noopener">
+    ☕ Buy me a coffee
+  </a>
+
+  <p class="foot">Private · stored only on your computer</p>
+  <script src="popup.js"></script>
+</body>
+</html>

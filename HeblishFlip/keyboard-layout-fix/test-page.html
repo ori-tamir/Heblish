@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>בדיקת Keyboard Layout Fix</title>
+  <style>
+    body {
+      font-family: Arial, "Segoe UI", sans-serif;
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+    label { display: block; font-weight: bold; margin-block-start: 1.2rem; }
+    input, textarea {
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 1.1rem;
+      padding: 0.5rem;
+      margin-block-start: 0.3rem;
+    }
+    .hint { color: #444; font-size: 0.95rem; }
+    code { background: #f0f0f0; padding: 0.1rem 0.3rem; }
+    [contenteditable] {
+      border: 1px solid #888;
+      min-height: 4rem;
+      padding: 0.5rem;
+      direction: ltr;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>בדיקת תוסף המרת מקלדת</h1>
+  <p class="hint">
+    התקן את התוסף ב־Edge (Load unpacked), רענן דף זה, הקלד באנגלית במקום עברית, ולחץ
+    <code>Alt+;</code> (מקלדת עברית) או <code>Alt+`</code> (מקלדת אנגלית) — יומר <strong>כל השדה</strong>
+  </p>
+
+  <label for="one">שדה input — נסה: <code>akuo eurtho kh turh</code></label>
+  <input id="one" type="text" placeholder="Alt+; או Alt+`" dir="ltr" />
+
+  <label for="two">textarea — multiline (שורה 1 נשארת, שורה 2 מתוקנת, Enter נשמר)</label>
+  <textarea id="two" rows="4" dir="ltr">hello my name is ori
+akuo eurtho kh turh</textarea>
+
+  <label>contenteditable</label>
+  <div contenteditable="true" dir="ltr">akup eurtho kh turh</div>
+
+  <p class="hint">
+    תוצאה צפויה לדוגמה: שלום קוראים לי אורי / תודה רבה
+  </p>
+</body>
+</html>
